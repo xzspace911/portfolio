@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Base href is rewritten by `flutter build web --base-href`. For GitHub Pages
+    project sites (user.github.io/portfolio/) build with --base-href /portfolio/.
+    For a future custom domain (ahmedwaleed.dev) build with --base-href / .
+    No structural change needed to switch.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#0A0A0B">
+
+  <!-- Primary SEO -->
+  <title>Ahmed Waleed — Flutter Engineer | Design-minded mobile product developer</title>
+  <meta name="description" content="Ahmed Waleed (XZSPACE) — a design-minded Flutter engineer building premium, production-ready mobile products with elegant design, scalable architecture, and exceptional UX. From idea to production.">
+  <meta name="keywords" content="Ahmed Waleed, XZSPACE, Flutter Developer, Flutter Engineer, Mobile Developer, Dart, Clean Architecture, Bloc, Cairo, Egypt">
+  <meta name="author" content="Ahmed Waleed">
+  <link rel="canonical" href="https://xzspace911.github.io/portfolio/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (LinkedIn / Slack / Facebook link previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Waleed — Flutter Engineer">
+  <meta property="og:description" content="From idea to production — premium Flutter products with elegant design, scalable architecture, and exceptional UX.">
+  <meta property="og:image" content="icons/og-image.png">
+  <meta property="og:url" content="https://xzspace911.github.io/portfolio/">
+  <meta property="og:site_name" content="XZSPACE">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ahmed Waleed — Flutter Engineer">
+  <meta name="twitter:description" content="From idea to production — premium Flutter products, thoughtfully engineered.">
+  <meta name="twitter:image" content="icons/og-image.png">
+
+  <!-- Structured data: Google reads who this is -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmed Waleed",
+    "alternateName": "XZSPACE",
+    "jobTitle": "Flutter Engineer",
+    "description": "Design-minded Flutter engineer building premium, production-ready mobile products.",
+    "url": "https://xzspace911.github.io/portfolio/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "Egypt" },
+    "worksFor": { "@type": "Organization", "name": "Croco-IT" },
+    "knowsLanguage": ["Arabic", "English", "German"],
+    "knowsAbout": ["Flutter", "Dart", "Mobile Development", "Clean Architecture", "Bloc", "UI/UX Design"],
+    "sameAs": [
+      "https://github.com/xzspace911",
+      "https://www.linkedin.com/in/ahmed-waleed-a29964236/"
+    ]
+  }
+  </script>
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="XZSPACE">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Loading screen shown until Flutter paints — brand-consistent so there is
+       no white flash. Fades out once the app boots. */
+    :root { color-scheme: dark; }
+    html, body { margin: 0; padding: 0; background: #0A0A0B; }
+    #boot {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(120% 120% at 30% 20%, #1a0e26 0%, #0A0A0B 60%);
+      transition: opacity .6s ease; font-family: -apple-system, system-ui, sans-serif;
+    }
+    #boot.hide { opacity: 0; pointer-events: none; }
+    .mark {
+      width: 62px; height: 62px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #6B2D84, #9D4EDD);
+      color: #fff; font-weight: 700; font-size: 26px; letter-spacing: -1px;
+      box-shadow: 0 12px 50px rgba(157,78,221,.5);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: .92 } 50% { transform: scale(1.08); opacity: 1 } }
+    @media (prefers-reduced-motion: reduce) { .mark { animation: none } }
+  </style>
+</head>
+<body>
+  <div id="boot"><div class="mark">XZ</div></div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var boot = document.getElementById('boot');
+      if (boot) { boot.classList.add('hide'); setTimeout(function(){ boot.remove(); }, 700); }
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter pub *)",
+      "Bash(flutter analyze *)",
+      "Bash(timeout 300 flutter build web --no-tree-shake-icons)",
+      "Bash(flutter build *)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1440,900 --virtual-time-budget=9000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/hero_desktop.png http://localhost:8899/)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1440,900 --virtual-time-budget=12000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/hero_v2.png http://localhost:8899/)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=414,896 --virtual-time-budget=12000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/hero_mobile.png http://localhost:8899/)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=414,896 --virtual-time-budget=12000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/hero_mobile2.png http://localhost:8899/)",
+      "Bash(flutter test *)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --force-device-scale-factor=1 --window-size=1440,1150 --virtual-time-budget=8000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/proof_still.png http://localhost:8899/?jump=760)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --force-device-scale-factor=1 --window-size=1440,1150 --virtual-time-budget=8000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/about_still.png http://localhost:8899/?jump=1500)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --force-device-scale-factor=1 --window-size=1440,1050 --virtual-time-budget=9000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/about_final.png 'http://localhost:8899/?hero=400&jump=560')",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --force-device-scale-factor=1 --window-size=1440,1400 --virtual-time-budget=9000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/about_noscroll.png http://localhost:8899/?hero=80)",
+      "Bash(python3 -c \"import PIL; print\\('PIL', PIL.__version__\\)\")",
+      "Bash(python3 -)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1440,900 --virtual-time-budget=11000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/hero_portrait.png http://localhost:8899/)",
+      "Bash(rm -f lib/features/about/about_section.dart)",
+      "Bash(rmdir lib/features/about)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --force-device-scale-factor=1 --window-size=1440,1250 --virtual-time-budget=10000 --screenshot=/private/tmp/claude-501/-Volumes-XZSPACE-Personal-Projects-portfolio/c4296ade-479a-4e01-9af0-343c761f9559/scratchpad/bottom.png http://localhost:8899/?jump=20000)"
+    ]
+  }
+}
