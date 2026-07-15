@@ -1,0 +1,78 @@
+name: Deploy Flutter Web to GitHub Pages
+
+# Deploys automatically on every push to main. Also runnable on demand.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions required by the official GitHub Pages deploy actions.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once; a newer push supersedes an in-flight run.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build (Flutter Web · release)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter (stable)
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # For a GitHub Pages *project* site the app is served from
+      # https://<user>.github.io/<repo>/, so the base href must be "/<repo>/".
+      # We derive it from the repository name so this works no matter what the
+      # repo is called — no editing needed.
+      #
+      # If you later attach a custom domain (e.g. ahmedwaleed.dev) or use a
+      # user/org page (<user>.github.io), change the base href to "/".
+      - name: Build web (release)
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          echo "Building with base-href /${REPO_NAME}/"
+          flutter build web --release \
+            --no-tree-shake-icons \
+            --base-href "/${REPO_NAME}/"
+
+      # SPA fallback: serve index.html for unknown deep links / hard refreshes.
+      - name: Add 404 fallback
+        run: cp build/web/index.html build/web/404.html
+
+      # Skip Jekyll processing (keeps files like those starting with "_").
+      - name: Disable Jekyll
+        run: touch build/web/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/web
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
